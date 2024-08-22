@@ -1,10 +1,16 @@
+"use client";
+
 import { createReservationAction } from "@/lib/actions";
 import Image from "next/image";
+import { useState } from "react";
 import PrimaryButton from "./PrimaryButton";
 
 function CarForm({ car, user }) {
+  const [days, setDays] = useState("");
+
   const { id, price, discount } = car;
   const fullPrice = price - discount;
+  const pricePerDay = fullPrice * days;
 
   return (
     <>
@@ -31,6 +37,7 @@ function CarForm({ car, user }) {
             name="numDays"
             id="numDays"
             className="text-stone-800 bg-stone-200 p-2 rounded w-[270px]"
+            onChange={(e) => setDays(Number(e.target.value))}
             required
           >
             <option value="" key="">
@@ -44,7 +51,9 @@ function CarForm({ car, user }) {
           </select>
 
           <div>
-            <PrimaryButton type="Reserving...">Reserve</PrimaryButton>
+            <PrimaryButton type="Reserving...">
+              Reserve {pricePerDay > 0 && <span>for ${pricePerDay}</span>}
+            </PrimaryButton>
           </div>
         </div>
       </form>
