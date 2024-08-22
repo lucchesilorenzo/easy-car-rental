@@ -87,7 +87,7 @@ function UpdateProfileForm({ guest }) {
       </div>
 
       <div className="flex justify-end mt-6">
-        <PrimaryButton>Update profile</PrimaryButton>
+        <PrimaryButton type="Updating...">Update profile</PrimaryButton>
       </div>
     </form>
   );

@@ -1,3 +1,4 @@
+import ReservationCard from "@/components/ReservationCard";
 import { auth } from "@/lib/auth";
 import { getReservations } from "@/lib/data-service";
 import Link from "next/link";
@@ -12,7 +13,7 @@ async function Page() {
 
   return (
     <div>
-      <h2 className="text-2xl text-cyan-400">Your reservations</h2>
+      <h2 className="text-2xl text-cyan-400 mb-6">Your reservations</h2>
       {!reservations.length ? (
         <p className="text-lg mt-4">
           You don&apos;t have any reservations yet. Check out our{" "}
@@ -21,7 +22,11 @@ async function Page() {
           </Link>
         </p>
       ) : (
-        <p>Reservations</p>
+        <ul className="space-y-4">
+          {reservations.map((reservation) => (
+            <ReservationCard reservation={reservation} key={reservation.id} />
+          ))}
+        </ul>
       )}
     </div>
   );

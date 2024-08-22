@@ -1,9 +1,10 @@
+import { createReservationAction } from "@/lib/actions";
 import Image from "next/image";
 import PrimaryButton from "./PrimaryButton";
-import { createReservationAction } from "@/lib/actions";
 
 function CarForm({ car, user }) {
-  const { id } = car;
+  const { id, price, discount } = car;
+  const fullPrice = price - discount;
 
   return (
     <>
@@ -21,7 +22,8 @@ function CarForm({ car, user }) {
         </div>
       </div>
       <form action={createReservationAction} className="p-6">
-        <input type="hidden" name="id" value={id} />
+        <input type="hidden" name="fullPrice" value={fullPrice} />
+        <input type="hidden" name="carId" value={id} />
 
         <div className="flex flex-col gap-4">
           <label>For how many days?</label>
@@ -42,7 +44,7 @@ function CarForm({ car, user }) {
           </select>
 
           <div>
-            <PrimaryButton>Reserve</PrimaryButton>
+            <PrimaryButton type="Reserving...">Reserve</PrimaryButton>
           </div>
         </div>
       </form>

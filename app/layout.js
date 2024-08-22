@@ -19,7 +19,9 @@ function RootLayout({ children }) {
         className={`${roboto.className} bg-zinc-800 text-gray-100 min-h-screen relative antialiased`}
       >
         <Header />
-        <main className="max-w-7xl mx-auto w-full mt-16 mb-10">{children}</main>
+        <main className="max-w-7xl mx-auto w-full mt-16 mb-10 px-6">
+          {children}
+        </main>
       </body>
     </html>
   );

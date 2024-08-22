@@ -34,7 +34,8 @@ function Car({ car }) {
           <li className="flex gap-2 items-center">
             <LightBulbIcon className="w-6 h-6 text-stone-400" />
             <span className="text-lg">
-              <span className="font-bold">Fast</span> and reliable service
+              <span className="font-bold">Fast</span> and{" "}
+              <span className="font-bold">reliable</span> service
             </span>
           </li>
 

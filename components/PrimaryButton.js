@@ -1,6 +1,10 @@
-import Link from "next/link";
+"use client";
 
-function PrimaryButton({ children, href, onClick }) {
+import Link from "next/link";
+import { useFormStatus } from "react-dom";
+
+function PrimaryButton({ children, href, onClick, type }) {
+  const { pending } = useFormStatus();
   const styles =
     "bg-slate-100 text-gray-800 px-7 py-5 font-semibold hover:bg-slate-200 transition-all inline-block";
 
@@ -17,6 +21,9 @@ function PrimaryButton({ children, href, onClick }) {
         {children}
       </Link>
     );
+
+  if (type)
+    return <button className={styles}>{!pending ? children : type}</button>;
 
   return <button className={styles}>{children}</button>;
 }
