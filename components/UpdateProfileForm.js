@@ -48,6 +48,7 @@ function UpdateProfileForm({ guest }) {
           name="dateOfBirth"
           id="dateOfBirth"
           className="text-stone-800 bg-stone-200 py-3 px-4 rounded"
+          required
         />
       </div>
 
@@ -59,6 +60,7 @@ function UpdateProfileForm({ guest }) {
           name="phoneNumber"
           id="phoneNumber"
           className="text-stone-800 bg-stone-200 py-3 px-4 rounded"
+          required
         />
       </div>
 
@@ -70,13 +72,21 @@ function UpdateProfileForm({ guest }) {
           name="drivingLicenseNumber"
           id="drivingLicenseNumber"
           className="text-stone-800 bg-stone-200 py-3 px-4 rounded"
+          required
         />
       </div>
 
       <div className="flex flex-col space-y-2">
         <div className="flex gap-2 justify-between items-center">
           <label>Nationality</label>
-          <Image src={countryFlag} alt="Country Flag" width="20" height="20" />
+          {countryFlag && (
+            <Image
+              src={countryFlag}
+              alt="Country Flag"
+              width="20"
+              height="20"
+            />
+          )}
         </div>
         <SelectCountry
           name="nationality"

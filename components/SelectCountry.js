@@ -9,6 +9,7 @@ async function SelectCountry({ name, id, nationality, countryFlag }) {
       name={name}
       id={id}
       className="text-stone-800 bg-stone-200 py-3 px-4 rounded"
+      required
     >
       <option value="">Select country...</option>
       {countries.map((country) => (
