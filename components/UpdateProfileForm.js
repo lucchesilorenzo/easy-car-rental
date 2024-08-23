@@ -72,6 +72,8 @@ function UpdateProfileForm({ guest }) {
           name="drivingLicenseNumber"
           id="drivingLicenseNumber"
           className="text-stone-800 bg-stone-200 py-3 px-4 rounded"
+          pattern="[A-Z0-9]{5,15}"
+          title="5 to 15 characters"
           required
         />
       </div>
