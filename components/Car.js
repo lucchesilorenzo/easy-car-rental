@@ -18,7 +18,7 @@ function Car({ car }) {
           fill
         />
       </div>
-      <div className="p-4">
+      <div className="px-4">
         <h1 className="text-2xl lg:text-3xl font-medium text-cyan-400 my-6">
           {model}
         </h1>

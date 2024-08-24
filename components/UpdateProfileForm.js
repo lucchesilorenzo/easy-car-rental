@@ -50,7 +50,7 @@ function UpdateProfileForm({ guest }) {
           type="date"
           name="dateOfBirth"
           id="dateOfBirth"
-          className="text-stone-800 bg-stone-200 py-3 px-4 rounded"
+          className="text-stone-800 bg-stone-200 py-3 px-4 rounded w-full"
           required
         />
       </div>

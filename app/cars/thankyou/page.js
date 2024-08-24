@@ -2,8 +2,8 @@ import Link from "next/link";
 
 function Page() {
   return (
-    <div className="flex flex-col justify-center items-center gap-12">
-      <h1 className="text-xl lg:text-2xl font-medium text-cyan-400">
+    <div className="text-center">
+      <h1 className="text-xl lg:text-2xl font-medium text-cyan-400 mb-8">
         Thank you for your reservation!
       </h1>
       <Link href="/account/reservations" className="underline font-semibold">
