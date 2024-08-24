@@ -6,7 +6,7 @@ import { useFormStatus } from "react-dom";
 function PrimaryButton({ children, href, onClick, type }) {
   const { pending } = useFormStatus();
   const styles =
-    "bg-slate-100 text-gray-800 px-7 py-5 font-semibold hover:bg-slate-200 transition-all inline-block";
+    "bg-slate-100 text-gray-800 font-semibold hover:bg-slate-200 transition-all inline-block px-5 py-3 text-xs lg:px-7 lg:py-5 md:text-sm lg:text-md";
 
   if (onClick)
     return (

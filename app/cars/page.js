@@ -14,8 +14,10 @@ function Page({ searchParams }) {
 
   return (
     <div>
-      <h1 className="text-4xl font-medium text-cyan-400 mb-6">Our Cars</h1>
-      <p className="leading-relaxed">
+      <h1 className="text-2xl lg:text-3xl font-medium text-cyan-400 mb-6">
+        Our Cars
+      </h1>
+      <p className="text-sm lg:text-md leading-relaxed">
         Experience the thrill of the open road with our premium cars, designed
         for comfort and luxury. Picture yourself cruising through breathtaking
         landscapes, whether it&apos;s along the coast or through winding

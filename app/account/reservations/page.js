@@ -13,16 +13,18 @@ async function Page() {
 
   return (
     <div>
-      <h2 className="text-2xl text-cyan-400 mb-6">Your reservations</h2>
+      <h2 className="text-xl lg:text-2xl text-cyan-400 mb-6">
+        Your reservations
+      </h2>
       {!reservations.length ? (
-        <p className="text-lg mt-4">
+        <p className="text-sm lg:text-md mt-4">
           You don&apos;t have any reservations yet. Check out our{" "}
           <Link href="/cars" className="underline text-cyan-400 font-semibold">
             cars &rarr;
           </Link>
         </p>
       ) : (
-        <ul className="space-y-4">
+        <ul className="max-w-xl lg:max-w-6xl space-y-4">
           {reservations.map((reservation) => (
             <ReservationCard reservation={reservation} key={reservation.id} />
           ))}

@@ -12,10 +12,10 @@ function SignInButton() {
         <Image
           src="https://authjs.dev/img/providers/google.svg"
           alt="Sign in with Google"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
         />
-        <span className="text-lg">Continue with Google</span>
+        <span className="text-sm lg:text-md">Continue with Google</span>
       </button>
 
       <button
@@ -26,10 +26,10 @@ function SignInButton() {
         <Image
           src="https://authjs.dev/img/providers/github.svg"
           alt="Sign in with GitHub"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
         />
-        <span className="text-lg">Continue with GitHub</span>
+        <span className="text-sm lg:text-md">Continue with GitHub</span>
       </button>
     </form>
   );

@@ -6,8 +6,8 @@ async function Navigation() {
   const session = await auth();
 
   return (
-    <nav className="z-10 text-lg">
-      <ul className="flex items-center gap-16">
+    <nav className="z-10 text-sm lg:text-md">
+      <ul className="flex items-center gap-8 lg:gap-16">
         <li>
           <Link href="/cars" className="font-semibold hover:underline">
             Cars
@@ -22,13 +22,13 @@ async function Navigation() {
           {session?.user?.image ? (
             <Link
               href="/account"
-              className="font-semibold hover:underline flex items-center gap-4"
+              className="font-semibold flex items-center gap-4 hover:underline"
             >
               <Image
                 src={session.user.image}
                 alt={session.user.name}
-                width={40}
-                height={40}
+                width={30}
+                height={30}
                 className="rounded-full"
               />
               <span>Guest area</span>

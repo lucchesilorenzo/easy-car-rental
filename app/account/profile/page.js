@@ -12,8 +12,10 @@ async function Page() {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl text-cyan-400">Update your guest profile</h2>
-      <p>
+      <h2 className="text-xl lg:text-2xl text-cyan-400">
+        Update your guest profile
+      </h2>
+      <p className="text-sm lg:text-md">
         Providing the following information will make your check-in process
         faster and smoother. See you soon!
       </p>

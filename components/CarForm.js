@@ -14,14 +14,14 @@ function CarForm({ car, user }) {
 
   return (
     <>
-      <div className="flex justify-between items-center p-4 border-b border-stone-600 bg-stone-700">
+      <div className="text-sm lg:text-md flex justify-between items-center p-4 border-b border-stone-600 bg-stone-700">
         <p>Logged in as</p>
         <div className="flex gap-4 items-center">
           <Image
             src={user.image}
             alt={user.name}
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             className="rounded-full"
           />
           <span>{user.name}</span>
@@ -36,7 +36,7 @@ function CarForm({ car, user }) {
           <select
             name="numDays"
             id="numDays"
-            className="text-stone-800 bg-stone-200 p-2 rounded w-[270px]"
+            className="text-stone-800 bg-stone-200 p-2 rounded w-[270px] text-sm lg:text-md"
             onChange={(e) => setDays(Number(e.target.value))}
             required
           >

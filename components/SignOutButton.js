@@ -8,10 +8,11 @@ function SignOutButton() {
         if (confirm("Are you sure you want to sign out?"))
           await signOutAction(formData);
       }}
-      className="flex items-center gap-4 p-4 transition-all hover:bg-stone-600"
     >
-      <ArrowRightStartOnRectangleIcon className="w-6 h-6 text-stone-400" />
-      <button>Sign out</button>
+      <button className="text-sm lg:text-md flex items-center gap-4 p-4 w-full transition-all hover:bg-stone-600">
+        <ArrowRightStartOnRectangleIcon className="w-6 h-6 text-stone-400" />
+        <span className="hidden lg:inline">Sign out</span>
+      </button>
     </form>
   );
 }

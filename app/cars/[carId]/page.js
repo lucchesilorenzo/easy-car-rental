@@ -14,11 +14,11 @@ async function Page({ params }) {
   const car = await getCar(params.carId);
 
   return (
-    <div className="max-w-6xl mx-auto mt-8">
+    <div className="max-w-xl lg:max-w-6xl mx-auto mt-8">
       <Car car={car} />
 
       <div className="mt-24">
-        <h1 className="text-4xl font-medium text-cyan-400 mb-6 text-center">
+        <h1 className="text-2xl lg:text-3xl font-medium text-cyan-400 mb-6 text-center">
           Reserve{" "}
           <span className="italic font-bold underline">{car.model}</span> today.
           Pay on arrival.

@@ -9,24 +9,19 @@ async function ReservationCard({ reservation }) {
   const { image, model } = await getCar(carId);
 
   return (
-    <li className="flex border border-stone-600">
+    <li className="flex flex-col lg:flex-row border border-stone-600 max-w-xs sm:flex-row sm:max-w-xl lg:max-w-6xl">
       <div className="relative h-32 aspect-square">
-        <Image
-          src={image}
-          alt={model}
-          fill
-          className="object-cover border-r border-stone-600"
-        />
+        <Image src={image} alt={model} fill className="object-cover" />
       </div>
-      <div className="flex-1 border-r border-stone-600 p-4">
-        <h3 className="text-lg font-medium">{model}</h3>
-        <p className="flex gap-4">
+      <div className="flex-1 border-b border-t border-stone-600 p-3 lg:border-b-0 sm:border-b-0 sm:border-r sm:border-l lg:border-r">
+        <h3 className="text-sm lg:text-lg font-medium mb-2">{model}</h3>
+        <p className="flex gap-2 text-sm lg:text-md lg:gap-4">
           <span className="font-semibold text-cyan-400">${totalPrice}</span>
           <span>&bull;</span>
           <span>{numDays} days</span>
         </p>
       </div>
-      <div className="flex flex-col divide-y-2 divide-stone-600">
+      <div className="flex flex-col divide-y divide-stone-600 text-sm lg:text-md">
         <Link
           href={`/account/reservations/edit/${id}`}
           className="flex flex-1 items-center gap-2 p-4 hover:bg-stone-600 transition-all"

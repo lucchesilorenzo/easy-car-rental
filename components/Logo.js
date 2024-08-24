@@ -8,12 +8,14 @@ function Logo() {
       <Image
         src={logo}
         alt="Logo"
-        width="60"
-        height="60"
+        width={50}
+        height={50}
         className="rounded-full"
       />
 
-      <span className="font-semibold text-lg">Easy Car Rental</span>
+      <span className="font-semibold hidden text-sm sm:block lg:text-md">
+        Easy Car Rental
+      </span>
     </Link>
   );
 }

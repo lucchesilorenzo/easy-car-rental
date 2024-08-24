@@ -30,14 +30,16 @@ function SideNavigation() {
     <nav className="border-r border-stone-600">
       <ul className="space-y-2">
         {navLinks.map((link) => (
-          <li
-            key={link.name}
-            className={`flex items-center gap-4 p-4 transition-all hover:bg-stone-600 ${
-              pathname === link.href ? "bg-stone-600" : ""
-            }`}
-          >
-            {link.icon}
-            <Link href={link.href}>{link.name}</Link>
+          <li key={link.name}>
+            <Link
+              href={link.href}
+              className={`text-sm lg:text-md flex items-center gap-4 p-4 transition-all hover:bg-stone-600 ${
+                pathname === link.href ? "bg-stone-600" : ""
+              }`}
+            >
+              {link.icon}
+              <span className="hidden lg:inline">{link.name}</span>
+            </Link>
           </li>
         ))}
 

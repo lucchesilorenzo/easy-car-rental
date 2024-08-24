@@ -10,12 +10,14 @@ function Page({ params }) {
 
   return (
     <div>
-      <h2 className="text-2xl text-cyan-400">Edit Reservation #{id}</h2>
+      <h2 className="text-xl lg:text-2xl text-cyan-400">
+        Edit Reservation #{id}
+      </h2>
 
       <form action={updateReservationAction} className="mt-6">
         <input type="hidden" name="id" value={id} />
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 text-sm lg:text-md">
           <label>For how many days?</label>
           <select
             name="numDays"

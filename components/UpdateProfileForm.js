@@ -15,8 +15,11 @@ function UpdateProfileForm({ guest }) {
   } = guest;
 
   return (
-    <form action={updateGuestAction} className="flex flex-col gap-4 max-w-full">
-      <div className="flex flex-col space-y-2">
+    <form
+      action={updateGuestAction}
+      className="flex flex-col gap-4 max-w-64 sm:max-w-96 lg:max-w-full"
+    >
+      <div className="flex flex-col space-y-2 text-sm lg:text-md">
         <label>Full name</label>
         <input
           disabled
@@ -28,7 +31,7 @@ function UpdateProfileForm({ guest }) {
         />
       </div>
 
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2 text-sm lg:text-md">
         <label>Email</label>
         <input
           disabled
@@ -40,7 +43,7 @@ function UpdateProfileForm({ guest }) {
         />
       </div>
 
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2 text-sm lg:text-md">
         <label>Date of birth</label>
         <input
           defaultValue={dateOfBirth}
@@ -52,7 +55,7 @@ function UpdateProfileForm({ guest }) {
         />
       </div>
 
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2 text-sm lg:text-md">
         <label>Phone number</label>
         <input
           defaultValue={phoneNumber}
@@ -64,7 +67,7 @@ function UpdateProfileForm({ guest }) {
         />
       </div>
 
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2 text-sm lg:text-md">
         <label>Driving license number</label>
         <input
           defaultValue={drivingLicenseNumber}
@@ -78,7 +81,7 @@ function UpdateProfileForm({ guest }) {
         />
       </div>
 
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2 text-sm lg:text-md">
         <div className="flex gap-2 justify-between items-center">
           <label>Nationality</label>
           {countryFlag && (

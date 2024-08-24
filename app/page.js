@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Page() {
   return (
-    <main className="mt-32">
+    <main className="mt-12 md:mt-20 lg:mt-16">
       <Image
         src={bg}
         fill
@@ -14,7 +14,7 @@ function Page() {
       />
 
       <div className="relative z-10 text-center">
-        <h1 className="text-7xl mb-14 tracking-tight">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight mb-8 lg:mb-14">
           Welcome to Easy Car Rental.
         </h1>
         <PrimaryButton href="/cars">Explore cars</PrimaryButton>

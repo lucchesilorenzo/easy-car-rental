@@ -9,9 +9,9 @@ export const metadata = {
 
 function Page() {
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    <div className="grid md:grid-cols-5 lg:grid-cols-5 gap-x-24 gap-y-16 lg:gap-y-32 text-sm lg:text-md items-center">
       <div className="col-span-3">
-        <h1 className="text-4xl text-cyan-400 font-medium mb-10">
+        <h1 className="text-2xl lg:text-3xl text-cyan-400 font-medium mb-10">
           Welcome to The Easy Car Rental
         </h1>
 
@@ -47,7 +47,7 @@ function Page() {
       </div>
 
       <div className="col-span-3">
-        <h1 className="text-4xl text-cyan-400 font-medium mb-10">
+        <h1 className="text-2xl lg:text-3xl text-cyan-400 font-medium mb-10">
           Managed by our family since 1980
         </h1>
 

@@ -5,29 +5,29 @@ function CarCard({ car }) {
   const { id, model, price, discount, image } = car;
 
   return (
-    <div className="flex border border-stone-600 max-w-lg">
-      <div className="relative flex-1">
+    <div className="flex flex-col justify-between lg:flex-row border border-stone-600 max-w-lg">
+      <div className="relative aspect-video lg:w-[320px]">
         <Image
           fill
-          className="object-cover border-r border-stone-600"
+          className="object-cover border-b lg:border-r border-stone-600"
           src={image}
           alt={model}
         />
       </div>
 
-      <div className="space-y-3">
-        <div className="space-y-3 ml-4">
-          <h3 className="text-lg font-medium mb-1">{model}</h3>
+      <div className="flex flex-col lg:space-y-4">
+        <div className="h-[90px] p-2 lg:p-4 flex flex-col space-y-2 lg:space-y-4">
+          <h3 className="text-sm lg:text-lg font-medium">{model}</h3>
           <p className="space-x-2">
             {discount > 0 ? (
               <>
-                <span className="text-xl">${price - discount}</span>
-                <span className="line-through text-stone-400 text-sm">
+                <span className="text-md lg:text-lg">${price - discount}</span>
+                <span className="line-through text-stone-400 text-xs lg:text-sm">
                   {price}
                 </span>
               </>
             ) : (
-              <span className="text-xl">${price}</span>
+              <span className="text-md lg:text-lg">${price}</span>
             )}
 
             <span className="text-sm">/ day</span>
